@@ -15,3 +15,7 @@ button.nav {
 button.nav:hover {
     background-color: #c1c1c1;
 }
+
+p {
+    background: white;
+}
