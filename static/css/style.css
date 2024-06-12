@@ -4,8 +4,8 @@ body {
 }
 
 button.nav {
-    border-width: 0, 0, 2px, 0;
-    background-color: #f5f5f5;
+    border-style: none;
+    background-color: #ffffff;
     border-color: #101010;
     color: #101010;
     padding: 5px;
@@ -16,6 +16,8 @@ button.nav:hover {
     background-color: #c1c1c1;
 }
 
-p {
-    background: white;
+hr {
+    height: 5px;
+    background-color: #000000;
+    border-style: none;
 }
