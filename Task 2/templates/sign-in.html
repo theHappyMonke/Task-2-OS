@@ -1,23 +1,8 @@
-<!DOCTYPE html>
-<html lang = "en">
-    <head>
-        <title>Bean And Brew</title>
-        <link rel = "stylesheet" href = "/static/css/style.css">
-        <link rel = "icon" href = "/static/images/favicon.ico">
-    </head>
+{% extends "base.html" %}
 
-    <body>
-        <br>
-        <hr>
-        <div class = "topnav">
-            <h1 id = "logo">Bean & Brew</h1>
-            <div>
-                <a href = "/sign-in" class = "active">Sign in / Sign up</a>
-                <a href = "/booking">Booking</button></a>
-                <a href = "/about">About</a>
-                <a href = "/">Home</a>
-            </div>
-        </div>
-        <hr>
-    </body>
-</html>
+{% set active = "sign-in" %}
+
+{% block content %}
+<!--Put stuff here-->
+
+{% endblock %}

@@ -1,4 +1,19 @@
 from flask import Flask, render_template
+import sqlite3
+
+connection = sqlite3.connect('BeanBrew.db', check_same_thread = False)
+
+cursor = connection.cursor()
+
+query = """
+CREATE TABLE IF NOT EXISTS 
+users(id INTEGER PRIMARY KEY, 
+name TEXT NOT NULL, 
+email TEXT NOT NULL UNIQUE, 
+password TEXT NOT NULL)
+"""
+cursor.execute(query)
+cursor.close()
 
 app = Flask(__name__)
 
