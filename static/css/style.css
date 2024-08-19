@@ -9,24 +9,25 @@ hr {
 }
 
 .topnav {
-    overflow: hidden;
+    display: flex;
+    align-items: center; /* Vertically center the children */
+    justify-content: space-between; /* Space between logo and links container */
     background-color: #f8f8f8;
+    padding: 0 16px; /* Optional: Add some padding */
 }
 
-.topnav #logo {
-    float: left;
+.links-container {
+    display: flex;
+    align-items: center; /* Vertically center the links */
 }
 
 .topnav a {
-    height: auto;
-    line-height: 100%;
-    float: right;
-    color: #f8f8f8;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-    color: black;
+    float: right;
 }
 
 .topnav a:hover {
@@ -35,4 +36,13 @@ hr {
   
 .topnav a.active {
     background-color: #dbdbdb;
+}
+
+.content {
+    padding: 2em;
+    max-width: 800px;
+    margin: 2em auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
