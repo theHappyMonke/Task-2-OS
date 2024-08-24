@@ -1,22 +1,27 @@
 from flask import Flask, render_template
 import sqlite3
 
-connection = sqlite3.connect('BeanBrew.db', check_same_thread = False)
+
+'''################# Database content #################'''
+'''
+connection = sqlite3.connect('Bean&Brew.db', check_same_thread = False)
 
 cursor = connection.cursor()
 
-query = """
-CREATE TABLE IF NOT EXISTS 
-users(id INTEGER PRIMARY KEY, 
-name TEXT NOT NULL, 
-email TEXT NOT NULL UNIQUE, 
-password TEXT NOT NULL)
-"""
-cursor.execute(query)
-cursor.close()
+query = "CREATE TABLE IF NOT EXIST users(id INTEGER PRIMARY KEY, name TEXT NOT NULL, email TEXT NOT NULL UNIQUE, password TEXT NOT NULL)"
 
+cursor.execute(query)
+
+cursor.execute("INSERT INTO users (name, email, password) VALUES ('admin', 'admin@Bean&Brew.com', 'admin')")
+
+cursor.close()
+'''
+'''################# Flask content #################'''
+
+#Flask app instance
 app = Flask(__name__)
 
+#Flask app routes
 @app.route('/')
 def home():
     return render_template('home.html')
@@ -41,5 +46,6 @@ def classes():
 def sign_in():
     return render_template('sign-in.html')
 
+#Runs flask in debug mode
 if __name__ == '__main__':
     app.run(debug = True)
