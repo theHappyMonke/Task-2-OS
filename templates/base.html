@@ -12,8 +12,9 @@
         <div class = "topnav">
             <h1 id = "logo">Bean & Brew</h1>
             <div>
-                <a href = "/sign-in" {% if active == "sign-in" %}class = "active"{% endif %}>Sign in / Sign up</a>
-                <a href = "/booking" {% if active == "booking" %}class = "active"{% endif %}>Booking</button></a>
+                <a href = "/sign-in" {% if active == "sign-in" %}class = "active"{% endif %}>Join the club</a>
+                <a href = "/booking" {% if active == "booking" %}class = "active"{% endif %}>Booking</a>
+                <a href = "/menu" {% if active == "menu" %}class = "active"{% endif %}>Menu</a>
                 <a href = "/about" {% if active == "about" %}class = "active"{% endif %}>About</a>
                 <a href = "/" {% if active == "home" %}class = "active"{% endif %}>Home</a>
             </div>

@@ -8,17 +8,17 @@ hr {
     background-color: #ffdf00;
 }
 
+.links-container {
+    display: flex;
+    align-items: center; /* Vertically center the links */
+}
+
 .topnav {
     display: flex;
     align-items: center; /* Vertically center the children */
     justify-content: space-between; /* Space between logo and links container */
     background-color: #f8f8f8;
-    padding: 0 16px; /* Optional: Add some padding */
-}
-
-.links-container {
-    display: flex;
-    align-items: center; /* Vertically center the links */
+    padding: 0 16px; /* Adds some padding */
 }
 
 .topnav a {
@@ -36,6 +36,24 @@ hr {
   
 .topnav a.active {
     background-color: #dbdbdb;
+}
+
+.interactive a {
+    color: black;
+    background-color: #dbdbdb;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 5px;
+}
+
+.interactive a:hover {
+    background-color: #cccccc;
+}
+
+.menu h1{
+    color: blue;
 }
 
 .content {

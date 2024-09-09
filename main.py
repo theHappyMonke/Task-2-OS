@@ -35,6 +35,14 @@ def home():
 def about():
     return render_template('about.html')
 
+@app.route('/menu')
+def menu():
+    return render_template('menu.html')
+
+@app.route('/order')
+def order():
+    return render_template('order.html')
+
 @app.route('/booking')
 def booking():
     return render_template('booking.html')
