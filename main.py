@@ -3,19 +3,24 @@ import sqlite3
 
 
 '''################# Database content #################'''
-'''
+
 connection = sqlite3.connect('Bean&Brew.db', check_same_thread = False)
 
 cursor = connection.cursor()
 
-query = "CREATE TABLE IF NOT EXIST users(id INTEGER PRIMARY KEY, name TEXT NOT NULL, email TEXT NOT NULL UNIQUE, password TEXT NOT NULL)"
+query = """CREATE TABLE IF NOT EXISTS
+users(
+id INTEGER PRIMARY KEY,
+name TEXT NOT NULL,
+email TEXT NOT NULL UNIQUE,
+password TEXT NOT NULL)"""
 
 cursor.execute(query)
-
-cursor.execute("INSERT INTO users (name, email, password) VALUES ('admin', 'admin@Bean&Brew.com', 'admin')")
-
+cursor.execute("INSERT INTO users VALUES (NULL, ?, ?, ?), ('admin', 'admin@Bean&Brew.com', 'admin')")
+cursor.execute("SELECT * FROM users")
+connection.commit()
 cursor.close()
-'''
+
 '''################# Flask content #################'''
 
 #Flask app instance
