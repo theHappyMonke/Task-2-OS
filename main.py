@@ -16,9 +16,8 @@ email TEXT NOT NULL UNIQUE,
 password TEXT NOT NULL)"""
 
 cursor.execute(query)
-#cursor.execute("INSERT INTO users VALUES (NULL, ?, ?, ?), (?, 'admin', 'admin@Bean&Brew.com', 'admin')")
-#cursor.execute("SELECT * FROM users")
-#connection.commit()
+cursor.execute(query)
+connection.commit()
 cursor.close()
 
 '''################# Flask content #################'''
