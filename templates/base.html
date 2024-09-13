@@ -12,11 +12,11 @@
         <div class = "topnav">
             <h1 id = "logo">Bean & Brew</h1>
             <div>
-                <a href = "/sign-in" {% if active == "sign-in" %}class = "active"{% endif %}>Join the club</a>
-                <a href = "/booking" {% if active == "booking" %}class = "active"{% endif %}>Booking</a>
-                <a href = "/menu" {% if active == "menu" %}class = "active"{% endif %}>Menu</a>
-                <a href = "/about" {% if active == "about" %}class = "active"{% endif %}>About</a>
-                <a href = "/" {% if active == "home" %}class = "active"{% endif %}>Home</a>
+                <a href = "{{ url_for('sign_in') }}" {% if active == "sign-in" %}class = "active"{% endif %}>Join the club</a>
+                <a href = "{{ url_for('booking') }}" {% if active == "booking" %}class = "active"{% endif %}>Booking</a>
+                <a href = "{{ url_for('menu') }}" {% if active == "menu" %}class = "active"{% endif %}>Menu</a>
+                <a href = "{{ url_for('about') }}" {% if active == "about" %}class = "active"{% endif %}>About</a>
+                <a href = "{{ url_for('home') }}" {% if active == "home" %}class = "active"{% endif %}>Home</a>
             </div>
         </div>
         <hr>

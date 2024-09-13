@@ -1,0 +1,1 @@
+INSERT INTO users VALUES (NULL, "admin", "admin@bean&brew", "nimda")
